@@ -2,6 +2,6 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 
 
-def home(request):
-    """ return render(request, 'home.html') """
-    return HttpResponse("Home page")
+def index(request):
+    context = {'site_title': 'Tabs App'}
+    return render(request, 'tabsapp/index.html', context)
