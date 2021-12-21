@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightcoral;
+  width: 100%;
+}
+
+.user-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightcoral;
+  text-align: center;
+}
