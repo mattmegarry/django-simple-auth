@@ -8,6 +8,7 @@
 
 - Most wanted:
 ---- use postgres
+---- implement a custom user model (email, no username for e.g)
 ---- use django-crispy-forms (maybe)
 ---- email confirmation signup (see geeks for geeks)
 -------- use mailhog
