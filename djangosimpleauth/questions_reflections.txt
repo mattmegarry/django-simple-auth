@@ -19,6 +19,72 @@
     def __str__(self):
         return self.secret_text
 
-Notable bit of documentation:
+- If I logout, and then press back button, I can see the secret again!!
+---- https://stackoverflow.com/questions/28000981/django-user-re-entering-session-by-clicking-browser-back-button-after-logging
+---- Read all the way down inc. post about @login_required decorator
+
+Notable bits of documentation and content:
 https://docs.djangoproject.com/en/3.2/intro/tutorial02/#make-the-poll-app-modifiable-in-the-admin
+--- VSCode setup
 https://stackoverflow.com/a/67592821/14269225
+--- Cookie Cutter
+https://www.youtube.com/watch?v=RVLzZc3GUrk
+--- Get familiar with reading the docs e.g...
+https://docs.djangoproject.com/en/3.2/ref/ (This is a good list to go through!!)
+https://docs.djangoproject.com/en/3.2/ref/urls/#django.urls.path
+https://docs.djangoproject.com/en/3.2/ref/models/fields/#django.db.models.OneToOneField
+--- Static files
+https://docs.djangoproject.com/en/3.2/howto/static-files/
+--- Production / Deployment
+https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/
+https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
+--- using relative paths for templates... (easier in deployment?) (What is MEDIA_ROOT?)
+https://stackoverflow.com/a/3038572/14269225 [ACTUALLY - I think this relates to older versions of Django?]
+** ---This seems particularly good - user models and more --- **
+https://blog.crunchydata.com/blog/extending-djangos-user-model-with-onetoonefield
+--- Good to know about namespaces, though I'm still unclear on namespace vs appname - same thing? ---
+https://stackoverflow.com/a/41883421/14269225
+** --- CHEATSHEET: very useful--- **
+https://dev.to/ericchapman/my-beloved-django-cheat-sheet-2056
+** --- TUTORIAL I mainly followed in this project, quite good --- **
+https://vegibit.com/how-to-sign-up-and-log-in-users-with-django/
+-- Django architecture -- V. old probs wrongish now, but looks good still
+https://streamhacker.com/2011/01/03/django-application-conventions/
+
+** Promising (Simple) Auth Tutorials **
+https://vegibit.com/how-to-sign-up-and-log-in-users-with-django/ (And see list at the end!!!)
+https://learndjango.com/tutorials/django-login-and-logout-tutorial
+https://learndjango.com/tutorials/django-signup-tutorial
+https://learndjango.com/tutorials/django-password-reset-tutorial
+https://github.com/pennersr/django-allauth
+https://docs.djangoproject.com/en/3.2/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project (also see cheatsheet)
+https://docs.djangoproject.com/en/3.2/ref/settings/#auth
+https://docs.djangoproject.com/en/3.2/topics/auth/customizing
+
+Looking into these and what they can do would be good:
+By default, INSTALLED_APPS contains the following apps, all of which come with Django:
+
+django.contrib.admin – The admin site. You’ll use it shortly.
+django.contrib.auth – An authentication system.
+django.contrib.contenttypes – A framework for content types.
+django.contrib.sessions – A session framework.
+django.contrib.messages – A messaging framework.
+django.contrib.staticfiles – A framework for managing static files.
+
+** Pedagogical exercises...
+Could write out the different things you can do in a view, and why
+--- Functional vs Classes (can use built-ins or something??)
+--- Use shortcuts or do it raw? (first examples in the official tutorial)
+Could write out the flow of execution of a request, also thinking about
+the request object too (don't forget middlewares)
+Could learn about middlewares and how (any typically why) to write one in Django
+Down the road: how and when to use celery.
+Could take notes from Two Scoops of Django for concrete things (like naming conventions (and much more))
+
+** Next steps (ideas so far)in...
+--- Do the geek for geeks (or another) email conf. auth tutorial
+--- Do it with rest-framework
+--- Then, see how to produce same / similar with Cookie Cutter
+--- Down the road, all-auth could be good.
+--- Another idea, go through (https://docs.djangoproject.com/en/3.2/topics/auth/customizing)
+and create a toy app with multiple levels of authorization (e.g. teacher, student etc).
