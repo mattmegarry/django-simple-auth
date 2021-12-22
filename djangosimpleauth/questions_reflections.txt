@@ -4,3 +4,12 @@
 - Custom User Models - yay or nay?
 - Should I have used crispy-forms? (Geeks for Geeks tutorial for e.g.)
 - How are sessions handled in a typical Django SSR app? ('you are logged in...')
+- VSCode is currently formatting my html template files annoyingly...
+
+- Most wanted:
+---- use postgres
+---- use django-crispy-forms (maybe)
+---- email confirmation signup (see geeks for geeks)
+-------- use mailhog
+---- use django-allauth (maybe)
+---- use django-rest-framework AND standard SSR pages together
