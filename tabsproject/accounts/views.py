@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 
-HOMEPAGE = 'tabsapp:home'
+HOMEPAGE = 'index'
 
 
 def signup_view(request):
