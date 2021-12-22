@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def index(request):
-    return render(request, 'layout.html')
+    if request.user.is_authenticated:
+        return redirect('usersecrets:secret')
+    else:
+        return render(request, 'layout.html')

@@ -14,3 +14,11 @@
 -------- use mailhog
 ---- use django-allauth (maybe)
 ---- use django-rest-framework AND standard SSR pages together
+
+- What exactly does this do in a model?
+    def __str__(self):
+        return self.secret_text
+
+Notable bit of documentation:
+https://docs.djangoproject.com/en/3.2/intro/tutorial02/#make-the-poll-app-modifiable-in-the-admin
+https://stackoverflow.com/a/67592821/14269225
