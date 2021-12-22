@@ -1,16 +1,29 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login
 
 
-def signup(request):
+def signup_view(request):
     if request.method == 'POST':
         print("It meeeee")
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('tabsapp:home')  # Redirect to a success page.
+            return redirect('accounts:login')  # Redirect to a success page.
     else:
         form = UserCreationForm()
     return render(request, 'accounts/signup.html', {'form': form})
 
 # When receiving a POST request, why do we redirect() and then render()?
+
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('tabsapp:home')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'accounts/login.html', {'form': form})
