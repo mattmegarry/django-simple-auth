@@ -1,0 +1,6 @@
+- Redirect... whats up with that?
+- Can the PROJECT have it's own views? i.e. index.html?
+--- I should maybe scrap the tabsapp app, esp if yes to above.
+- Custom User Models - yay or nay?
+- Should I have used crispy-forms? (Geeks for Geeks tutorial for e.g.)
+- How are sessions handled in a typical Django SSR app? ('you are logged in...')
