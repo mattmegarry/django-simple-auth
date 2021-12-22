@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def index(request):
     context = {'site_title': 'Tabs App'}
-    return render(request, 'tabsapp/index.html', context)
+    return render(request, 'index.html', context)
