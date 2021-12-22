@@ -10,14 +10,12 @@ def signup_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('accounts:login')  # Redirect to a success page.
+            return redirect('accounts:login')
     else:
         if request.user.is_authenticated:
             return redirect(HOMEPAGE)
         form = UserCreationForm()
     return render(request, 'accounts/signup.html', {'form': form})
-
-# When receiving a POST request, why do we redirect() and then render()?
 
 
 def login_view(request):
