@@ -30,6 +30,7 @@ https://stackoverflow.com/a/67592821/14269225
 --- Cookie Cutter
 https://www.youtube.com/watch?v=RVLzZc3GUrk
 --- Get familiar with reading the docs e.g...
+https://docs.djangoproject.com/en/3.2/
 https://docs.djangoproject.com/en/3.2/ref/ (This is a good list to go through!!)
 https://docs.djangoproject.com/en/3.2/ref/urls/#django.urls.path
 https://docs.djangoproject.com/en/3.2/ref/models/fields/#django.db.models.OneToOneField
@@ -50,16 +51,33 @@ https://dev.to/ericchapman/my-beloved-django-cheat-sheet-2056
 https://vegibit.com/how-to-sign-up-and-log-in-users-with-django/
 -- Django architecture -- V. old probs wrongish now, but looks good still
 https://streamhacker.com/2011/01/03/django-application-conventions/
+-- What is A Django backend? --
+"django comes with one or more implementations of authentication, 
+caching, etc but the framework anticipates the need for adding your 
+own custom "backend" implementation. They generally provide a simple 
+well-documented interface as well as a setting variable so it is easy 
+to plug in your own custom module."
+https://stackoverflow.com/a/8135125/14269225
+https://charlesleifer.com/blog/django-patterns-pluggable-backends/
+
+** Mozilla Tutorial Looks Really Good **
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
+(although I have covered much of the content... could still be worth it)
 
 ** Promising (Simple) Auth Tutorials **
+https://www.geeksforgeeks.org/django-sign-up-and-login-with-confirmation-email-python/
 https://vegibit.com/how-to-sign-up-and-log-in-users-with-django/ (And see list at the end!!!)
 https://learndjango.com/tutorials/django-login-and-logout-tutorial
 https://learndjango.com/tutorials/django-signup-tutorial
 https://learndjango.com/tutorials/django-password-reset-tutorial
 https://github.com/pennersr/django-allauth
+****** https://docs.djangoproject.com/en/3.2/topics/auth/default/ ********
 https://docs.djangoproject.com/en/3.2/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project (also see cheatsheet)
 https://docs.djangoproject.com/en/3.2/ref/settings/#auth
 https://docs.djangoproject.com/en/3.2/topics/auth/customizing
+https://ordinarycoders.com/blog/article/django-user-register-login-logout -- uses authenticate from django.contrib.auth rather than AuthentificationForm as I did.
+https://simpleisbetterthancomplex.com/tutorial/2016/06/27/how-to-use-djangos-built-in-login-system.html -- uses pre made views from (from django.contrib.auth import views)
+https://himanshuxd.medium.com/how-to-create-registration-login-webapp-with-django-2-0-fd33dc7a6c67 -- uses customs forms in a forms.py file, @login_required decorators and reverse() (something I don't know about)
 
 Looking into these and what they can do would be good:
 By default, INSTALLED_APPS contains the following apps, all of which come with Django:
